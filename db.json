@@ -17,6 +17,12 @@
       "fullName": "Poop",
       "email": "poopfart@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "2a95",
+      "fullName": "Rohit",
+      "email": "rs45@gmail.com",
+      "password": "1234"
     }
   ]
 }

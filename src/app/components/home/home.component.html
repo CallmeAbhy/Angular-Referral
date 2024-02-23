@@ -1,2 +1,39 @@
-<p>home works!</p>
-<p-button label="Sign out" (onClick)="logOut()"></p-button>
+<!-- home.component.html -->
+
+<div class="navbar">
+    <div class="brand">
+      Angular Job Search
+    </div>
+    <div class="menu-right">
+      <button class="logout-button" (click)="logOut()">Logout</button>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="search-bar">
+        <input type="text" class="search-input" [(ngModel)]="searchTerm" placeholder="Search by Referral or Service ID">
+        <button class="search-button" (click)="search()">Search</button>
+      </div>
+      
+  
+    <div class="card-container">
+      <div class="card referral-card">
+        <h3>Candidate Referral List</h3>
+        <ul>
+          <li *ngFor="let referral of filteredReferralList">
+            {{ referral.referralName }} - {{ referral.company }} (Position: {{ referral.position }})
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card services-card">
+        <h3>Candidate Services</h3>
+        <ul>
+          <li *ngFor="let service of filteredServicesList">
+            {{ service.serviceName }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
